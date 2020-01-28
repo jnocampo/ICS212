@@ -1,0 +1,53 @@
+Script started on Wed 01 May 2019 11:34:31 PM HST
+[?1034hbash-4.2$ s[Kls
+,getrelease.sh	,Makefile  ,output.txt	,project1functions.c  ,project1main.c  proofOfComp.txt	,record.h  SCCS
+bash-4.2$ sccs get getrelease.sh
+get: warning: SCCS/s.getrelease.sh: No id keywords.
+1.1
+4 lines
+bash-4.2$ ls
+,getrelease.sh	getrelease.sh  ,Makefile  ,output.txt  ,project1functions.c  ,project1main.c  proofOfComp.txt  ,record.h  SCCS
+bash-4.2$ chmod a+rx getrelease.sh 
+bash-4.2$ ./getrelease.sh 
+get: warning: SCCS/s.project1functions.c: No id keywords.
+1.1
+271 lines
+get: warning: SCCS/s.project1main.c: No id keywords.
+1.1
+136 lines
+get: warning: SCCS/s.record.h: No id keywords.
+1.1
+13 lines
+get: warning: SCCS/s.Makefile: No id keywords.
+1.1
+13 lines
+bash-4.2$ ls
+,getrelease.sh	Makefile   ,output.txt		 project1functions.c  project1main.c   ,record.h  SCCS
+getrelease.sh	,Makefile  ,project1functions.c  ,project1main.c      proofOfComp.txt  record.h
+bash-4.2$ make
+gcc -ansi -pedantic-errors -Wall -c project1main.c
+cc    -c -o project1functions.o project1functions.c
+gcc project1main.o project1functions.o -o project1
+bash-4.2$ ./project1 
+No records read in from file.
+Add a new record, type : add
+Print a record, type : print
+Print all records, type : all
+Find a record, type : find
+Delete records, type : delete
+To quit, type : quit
+Enter a command
+---------------
+all
+Printing all records...
+No records available.
+Enter a command
+---------------
+quit
+Writing out database to output.txt
+No records wrote out to text file.
+Qutting program..
+bash-4.2$ exit
+exit
+
+Script done on Wed 01 May 2019 11:35:15 PM HST

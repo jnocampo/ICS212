@@ -1,0 +1,19 @@
+ICS 212 Project 2 Test Report ;
+
+Requirements not met/not functional :
+
+The only requirement not met was getting my getAddress() function to not fully work. On the first run of the program,
+cin.getline() collects random characters from the stdio. I suspect I would need to flush the stdio at specific points
+in order to correctly collect user input for the addresses! Other than that I have met all functionaility design wise.
+
+Additional features/extra credit :
+
+I have added no additional features to my project 2.
+
+Future enhancements and/or general comments :
+
+In the future, I would like to make the UI a lot more intuitive and cleaner. I believe clean UIs are one of the biggest
+benefits a program can have. I would also like function that can check the user input on account numbers and automatically
+tell the user if the account number is taken. Another featue I would like to implement is sorting. After every record addition,
+I would like the list to sort itself because when printing all records back, it would look better to the user. It is also faster
+to add new records because the list would be in sorted order.

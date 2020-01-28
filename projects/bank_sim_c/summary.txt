@@ -1,0 +1,475 @@
+Script started on Thu 02 May 2019 08:02:32 PM HST
+[?1034hbash-4.2$ ./project1 debug][K
+----- Debug mode on -----
+----- readfile DEBUG ----- 
+----- filename : output.txt 
+No records read in from file.
+Add a new record, type : add
+Print a record, type : print
+Print all records, type : all
+Find a record, type : find
+Delete records, type : delete
+To quit, type : quit
+Enter a command
+---------------
+quit
+Writing out database to output.txt
+----- writefile DEBUG ----- 
+----- filename : output.txt 
+No records wrote out to text file.
+----- cleanup DEBUG ----- 
+Qutting program..
+bash-4.2$ ./project1 debug1
+Unknown argument supplied
+Try ./project1 debug instead
+Exting...
+bash-4.2$ ./project1 debug1[K deb[Kbug2
+Too many arguments provided.
+Try ./project1 or ./project1 debug
+Exiting...
+Unknown argument supplied
+Try ./project1 debug instead
+Exting...
+bash-4.2$ ./project1 
+No records read in from file.
+Add a new record, type : add
+Print a record, type : print
+Print all records, type : all
+Find a record, type : find
+Delete records, type : delete
+To quit, type : quit
+Enter a command
+---------------
+all
+Printing all records...
+No records available.
+Enter a command
+---------------
+print
+Enter the account number to print information :
+1234
+Record not found.
+Enter a command
+---------------
+find
+Enter name to find records :
+Pancake
+No records found starting with :  
+Enter a command
+---------------
+delete
+Enter the account number to delete records :
+1234
+No record found with account number : 1234
+Enter a command
+---------------
+quit
+Writing out database to output.txt
+No records wrote out to text file.
+Qutting program..
+bash-4.2$ ./project1 
+No records read in from file.
+Add a new record, type : add
+Print a record, type : print
+Print all records, type : all
+Find a record, type : find
+Delete records, type : delete
+To quit, type : quit
+Enter a command
+---------------
+add
+Adding a record : 
+Enter account number :  
+Please enter a valid integer or the system will default the account number to 0 :
+1234
+Enter name of account owner :  
+Pancake Ocampo
+Enter the address of the account : 
+Include '^' at the end to indicate the end of the address : 
+ 87 Wonka Ave.
+San Francisco, CA  99999, CA^
+New record successfully added!
+Enter a command
+---------------
+all
+Printing all records...
+-------------
+Account No : 1234
+Name : Pancake Ocampo
+Address : 87 Wonka Ave.
+San Francisco, 99999, CA^
+-------------
+Enter a command
+---------------
+print
+Enter the account number to print information :
+1234
+-------------
+Account No : 1234
+Name : Pancake Ocampo
+Address : 87 Wonka Ave.
+San Francisco, 99999, CA^
+-------------
+Enter a command
+---------------
+ind   find
+Enter name to find records :
+Pan
+-------------
+Account No : 1234
+Name : Pancake Ocampo
+Address : 87 Wonka Ave.
+San Francisco, 99999, CA^
+-------------
+Enter a command
+---------------
+quit
+Writing out database to output.txt
+Sucessfully wrote records to text file...
+Qutting program..
+bash-4.2$ ./project1 debug
+----- Debug mode on -----
+----- readfile DEBUG ----- 
+----- filename : output.txt 
+----- addRecord DEBUG ----- 
+----- accountno : 1234 
+----- name : Pancake Ocampo
+----- address : 87 Wonka Ave.
+San Francisco, 99999, CA^
+ 
+Reading in records out text file.
+Add a new record, type : add
+Print a record, type : print
+Print all records, type : all
+Find a record, type : find
+Delete records, type : delete
+To quit, type : quit
+Enter a command
+---------------
+add
+----- starting addRecord ----- 
+Adding a record : 
+Enter account number :  
+Please enter a valid integer or the system will default the account number to 0 :
+1234
+Enter name of account owner :  
+Poi Ocampo
+----- getAddress DEBUG ----- 
+----- lineChars : 100
+Enter the address of the account : 
+Include '^' at the end to indicate the end of the address : 
+ 3934 Wakanda St.^
+----- addRecord DEBUG ----- 
+----- accountno : 1234 
+----- name : Poi Ocampo
+----- address : 3934 Wakanda St.^
+ 
+Duplicate entry, record not added to the database.
+Enter a command
+---------------
+all
+----- starting printAllRecords ----- 
+----- printAllRecords DEBUG -----
+Printing all records...
+-------------
+Account No : 1234
+Name : Pancake Ocampo
+Address : 87 Wonka Ave.
+San Francisco, 99999, CA^
+-------------
+Enter a command
+---------------
+add
+----- starting addRecord ----- 
+Adding a record : 
+Enter account number :  
+Please enter a valid integer or the system will default the account number to 0 :
+qqqq
+Enter name of account owner :  
+Poi Ocampo
+----- getAddress DEBUG ----- 
+----- lineChars : 100
+Enter the address of the account : 
+Include '^' at the end to indicate the end of the address : 
+ 3943 Wakanda St.^
+----- addRecord DEBUG ----- 
+----- accountno : 0 
+----- name : Poi Ocampo
+----- address : 3943 Wakanda St.^
+ 
+New record successfully added!
+Enter a command
+---------------
+add
+----- starting addRecord ----- 
+Adding a record : 
+Enter account number :  
+Please enter a valid integer or the system will default the account number to 0 :
+9999
+Enter name of account owner :  
+Poe Ocampo
+----- getAddress DEBUG ----- 
+----- lineChars : 100
+Enter the address of the account : 
+Include '^' at the end to indicate the end of the address : 
+ 888 888,@
+3213 Yessah^
+----- addRecord DEBUG ----- 
+----- accountno : 9999 
+----- name : Poe Ocampo
+----- address : 888 888,@
+3213 Yessah^
+ 
+New record successfully added!
+Enter a command
+---------------
+add
+----- starting addRecord ----- 
+Adding a record : 
+Enter account number :  
+Please enter a valid integer or the system will default the account number to 0 :
+5678913243
+Enter name of account owner :  
+Popcorn Ocampo
+----- getAddress DEBUG ----- 
+----- lineChars : 100
+Enter the address of the account : 
+Include '^' at the end to indicate the end of the address : 
+ 3213 Yessah^
+----- addRecord DEBUG ----- 
+----- accountno : 1383945947 
+----- name : Popcorn Ocampo
+----- address : 3213 Yessah^
+ 
+New record successfully added!
+Enter a command
+---------------
+all
+----- starting printAllRecords ----- 
+----- printAllRecords DEBUG -----
+Printing all records...
+-------------
+Account No : 1234
+Name : Pancake Ocampo
+Address : 87 Wonka Ave.
+San Francisco, 99999, CA^
+-------------
+-------------
+Account No : 0
+Name : Poi Ocampo
+Address : 3943 Wakanda St.^
+-------------
+-------------
+Account No : 9999
+Name : Poe Ocampo
+Address : 888 888,@
+3213 Yessah^
+-------------
+-------------
+Account No : 1383945947
+Name : Popcorn Ocampo
+Address : 3213 Yessah^
+-------------
+Enter a command
+---------------
+print
+----- starting printRecord ----- 
+Enter the account number to print information :
+9999
+----- printRecord DEBUG ----- 
+----- accountno : 9999 
+-------------
+Account No : 9999
+Name : Poe Ocampo
+Address : 888 888,@
+3213 Yessah^
+-------------
+Enter a command
+---------------
+find
+----- starting findRecords ----- 
+Enter name to find records :
+Po
+----- findRecords DEBUG ----- 
+----- name : Po
+ 
+-------------
+Account No : 0
+Name : Poi Ocampo
+Address : 3943 Wakanda St.^
+-------------
+-------------
+Account No : 9999
+Name : Poe Ocampo
+Address : 888 888,@
+3213 Yessah^
+-------------
+-------------
+Account No : 1383945947
+Name : Popcorn Ocampo
+Address : 3213 Yessah^
+-------------
+Enter a command
+---------------
+add
+----- starting addRecord ----- 
+Adding a record : 
+Enter account number :  
+Please enter a valid integer or the system will default the account number to 0 :
+1
+Enter name of account owner :  
+Jessica Ocampo
+----- getAddress DEBUG ----- 
+----- lineChars : 100
+Enter the address of the account : 
+Include '^' at the end to indicate the end of the address : 
+ 89 Cotter Yo.
+UWU, Hawaii, 12345^
+----- addRecord DEBUG ----- 
+----- accountno : 1 
+----- name : Jessica Ocampo
+----- address : 89 Cotter Yo.
+UWU, Hawaii, 12345^
+ 
+New record successfully added!
+Enter a command
+---------------
+find
+----- starting findRecords ----- 
+Enter name to find records :
+P
+----- findRecords DEBUG ----- 
+----- name : P
+ 
+-------------
+Account No : 1234
+Name : Pancake Ocampo
+Address : 87 Wonka Ave.
+San Francisco, 99999, CA^
+-------------
+-------------
+Account No : 0
+Name : Poi Ocampo
+Address : 3943 Wakanda St.^
+-------------
+-------------
+Account No : 9999
+Name : Poe Ocampo
+Address : 888 888,@
+3213 Yessah^
+-------------
+-------------
+Account No : 1383945947
+Name : Popcorn Ocampo
+Address : 3213 Yessah^
+-------------
+Enter a command
+---------------
+delete
+----- starting deleteRecords ----- 
+Enter the account number to delete records :
+9999
+----- deleteRecord DEBUG -----  
+----- accountno : 9999 ----- 
+No record found with account number : 9999
+Enter a command
+---------------
+all
+----- starting printAllRecords ----- 
+----- printAllRecords DEBUG -----
+Printing all records...
+-------------
+Account No : 1234
+Name : Pancake Ocampo
+Address : 87 Wonka Ave.
+San Francisco, 99999, CA^
+-------------
+-------------
+Account No : 0
+Name : Poi Ocampo
+Address : 3943 Wakanda St.^
+-------------
+-------------
+Account No : 1383945947
+Name : Popcorn Ocampo
+Address : 3213 Yessah^
+-------------
+-------------
+Account No : 1
+Name : Jessica Ocampo
+Address : 89 Cotter Yo.
+UWU, Hawaii, 12345^
+-------------
+Enter a command
+---------------
+find
+----- starting findRecords ----- 
+Enter name to find records :
+99  L
+----- findRecords DEBUG ----- 
+----- name : L
+ 
+No records found starting with : Jessica Ocampo
+ 
+Enter a command
+---------------
+print
+----- starting printRecord ----- 
+Enter the account number to print information :
+9999
+----- printRecord DEBUG ----- 
+----- accountno : 9999 
+Record not found.
+Enter a command
+---------------
+quit
+Writing out database to output.txt
+----- writefile DEBUG ----- 
+----- filename : output.txt 
+Sucessfully wrote records to text file...
+----- cleanup DEBUG ----- 
+Qutting program..
+bash-4.2$ ./project1 
+Reading in records out text file.
+Add a new record, type : add
+Print a record, type : print
+Print all records, type : all
+Find a record, type : find
+Delete records, type : delete
+To quit, type : quit
+Enter a command
+---------------
+all
+Printing all records...
+-------------
+Account No : 1234
+Name : Pancake Ocampo
+Address : 87 Wonka Ave.
+San Francisco, 99999, CA^
+-------------
+-------------
+Account No : 0
+Name : Poi Ocampo
+Address : 3943 Wakanda St.^
+-------------
+-------------
+Account No : 1383945947
+Name : Popcorn Ocampo
+Address : 3213 Yessah^
+-------------
+-------------
+Account No : 1
+Name : Jessica Ocampo
+Address : 89 Cotter Yo.
+UWU, Hawaii, 12345^
+-------------
+Enter a command
+---------------
+quit
+Writing out database to output.txt
+Sucessfully wrote records to text file...
+Qutting program..
+bash-4.2$ exit
+exit
+
+Script done on Thu 02 May 2019 08:10:36 PM HST

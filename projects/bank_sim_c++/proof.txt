@@ -1,0 +1,166 @@
+Script started on Sun 05 May 2019 08:17:00 PM HST
+[?1034hbash-4.2$ ls
+,getrelease.sh	,llist.h   ,project1functions.c  ,project2main.cpp  ,record.h
+,llist.cpp	,Makefile  ,project1main.c	 proof.txt	    SCCS
+bash-4.2$ sccs get -r g[K[K1.1 getrelease.sh
+get: warning: SCCS/s.getrelease.sh: No id keywords.
+1.1
+4 lines
+bash-4.2$ chmod a+rx getrelease.sh 
+bash-4.2$ cat getrelease.sh 
+#!/bin/sh
+sccs get project1functions.c
+sccs get project1main.c
+sccs get -r1.1 record.h
+sccs get -r1.1 Makefilebash-4.2$ ./getrelease.sh 
+get: warning: SCCS/s.project1functions.c: No id keywords.
+1.1
+271 lines
+get: warning: SCCS/s.project1main.c: No id keywords.
+1.1
+135 lines
+get: warning: SCCS/s.record.h: No id keywords.
+1.1
+13 lines
+get: warning: SCCS/s.Makefile: No id keywords.
+1.1
+13 lines
+bash-4.2$ make
+gcc -ansi -pedantic-errors -Wall -c project1main.c
+cc    -c -o project1functions.o project1functions.c
+gcc project1main.o project1functions.o -o project1
+bash-4.2$ ls
+,getrelease.sh	,llist.h   project1		 project1functions.o  project1main.o	 ,record.h
+getrelease.sh	Makefile   ,project1functions.c  ,project1main.c      ,project2main.cpp  record.h
+,llist.cpp	,Makefile  project1functions.c	 project1main.c       proof.txt		 SCCS
+bash-4.2$ rm -rf *.c[K[K[Krecord.h getrelease.sh project1functions.c pro
+project1             project1functions.o  project1main.o       
+project1functions.c  project1main.c       proof.txt            
+bash-4.2$ rm -rf record.h getrelease.sh project1functions.c project11[Kmain.c pro
+project1             project1functions.o  project1main.o       
+project1functions.c  project1main.c       proof.txt            
+bash-4.2$ rm -rf record.h getrelease.sh project1functions.c project1main.c project1
+bash-4.2$ ls
+,getrelease.sh	Makefile	      project1functions.o  ,project2main.cpp  SCCS
+,llist.cpp	,Makefile	      ,project1main.c	   proof.txt
+,llist.h	,project1functions.c  project1main.o	   ,record.h
+bash-4.2$ rm -rf Makefile *.o
+bash-4.2$ ls
+,getrelease.sh	,llist.h   ,project1functions.c  ,project2main.cpp  ,record.h
+,llist.cpp	,Makefile  ,project1main.c	 proof.txt	    SCCS
+bash-4.2$ sccs get -r 1.[K[K[K1.2 g[Kgetrelease.sh
+get: warning: SCCS/s.getrelease.sh: No id keywords.
+1.2
+4 lines
+bash-4.2$ cat getrelease.sh 
+#!/bin/sh
+sccs get project2main.cpp
+sccs get llist.cpp
+sccs get llist.h
+sccs get -r1.2 record.h
+sccs get -r1.2 Makefilebash-4.2$ ./get[K[K[K[K[Kls
+,getrelease.sh	,llist.cpp  ,Makefile		  ,project1main.c    proof.txt	SCCS
+getrelease.sh	,llist.h    ,project1functions.c  ,project2main.cpp  ,record.h
+bash-4.2$ ./get[K[K[K[K[Kchmod a+rx getrelease.sh 
+bash-4.2$ ./getrelease.sh 
+get: warning: SCCS/s.project2main.cpp: No id keywords.
+1.1
+132 lines
+get: warning: SCCS/s.llist.cpp: No id keywords.
+1.1
+362 lines
+get: warning: SCCS/s.llist.h: No id keywords.
+1.1
+23 lines
+get: warning: SCCS/s.record.h: No id keywords.
+1.2
+15 lines
+get: warning: SCCS/s.Makefile: No id keywords.
+1.2
+13 lines
+bash-4.2$ make
+g++ -ansi -pedantic-errors -Wall -c project2main.cpp
+[01m[Kproject2main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kproject2main.cpp:59:42:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     llist *start = new llist("output.txt");
+[01;32m[K                                          ^[m[K
+g++    -c -o llist.o llist.cpp
+g++ project2main.o llist.o -o project2
+bash-4.2$ ./project2 
+Add a new record, type : add
+Print a record, type : print
+Print all records, type : all
+Find a record, type : find
+Delete records, type : delete
+Reverse records, type : reverse
+To quit, type : quit
+Enter a command
+---------------
+add
+Adding a record...
+Enter account number : 123
+
+Enter name of account owner :  Hello World
+
+Enter the address of the account : 
+Include '^' at the end to indicate the end of the address : 
+Hell World
+2828 Forn tnight^
+Enter a command
+---------------
+all
+-------------
+Account No : 123
+Name : Hello World
+Address : @�X1ell World
+2828 Fortnight^
+-------------
+
+Enter a command
+---------------
+983
+Invalid menu item, please try again.
+Enter a command
+---------------
+Ekcs D!
+Invalid menu item, please try again.
+Enter a command
+---------------
+Invalid menu item, please try again.
+Enter a command
+---------------
+add
+Adding a record...
+Enter account number : 923
+
+Enter name of account owner :  asdd    Hello
+
+Enter the address of the account : 
+Include '^' at the end to indicate the end of the address : 
+Ecks d!
+Hello^
+Enter a command
+---------------
+all
+-------------
+Account No : 123
+Name : Hello World
+Address : @�X1ell World
+2828 Fortnight^
+-------------
+-------------
+Account No : 923
+Name : Hello
+Address : cks d!
+Hello^
+-------------
+
+Enter a command
+---------------
+quit
+Program is now exiting.
+Qutting program and cleaning up records...
+bash-4.2$ exit
+exit
+
+Script done on Sun 05 May 2019 08:23:22 PM HST
