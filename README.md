@@ -1,2 +1,2 @@
 # ICS212
-C/C++
+Assignments and Projects done for ICS 212 in C/C++
